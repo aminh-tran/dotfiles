@@ -11,26 +11,23 @@ fi
 
 # Setup Dotfiles
 function setupDotfiles() {
-  echo "Installing .gitconfig and .aliases for $1..."
+  echo "Installing .aliases for $1..."
 
   vimrcFile=".vimrc"
 
   if [[ $1 == 'local' ]]; then
-    gitConfigFile=".gitconfig.personal"
     aliasFile=".aliases.personal"
   else
-    gitConfigFile=".gitconfig.work"
     aliasFile=".aliases.work"
   fi
 
-  cp "$DOOT_DIR/$gitConfigFile" $HOME/".gitconfig"
   cp "$DOOT_DIR/$aliasFile" $HOME/".aliases"
   cp "$DOOT_DIR/$vimrcFile" $HOME/".vimrc"
 
   if [[ -d $DOOT_DIR ]] && [[ ! -L $DOOT_DIR ]]; then
     for doot in $(ls -ap $DOOT_DIR | grep -v /); do
       dootname="$(basename "$doot")"
-      if [[ $dootname =~ '.gitconfig' || $dootname =~ '.aliases' ]]; then
+      if [[ $dootname =~ '.aliases' ]]; then
         continue
       fi
 
