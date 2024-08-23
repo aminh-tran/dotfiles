@@ -14,9 +14,10 @@ alias gcm="git commit -m"
 alias gp="git push"
 alias gpf="git push --force"
 alias gco="git checkout"
-alias gcob="git checkout -b"
+alias gcb="git checkout -b"
 alias gl="git log"
 alias grbc="git rebase --continue"
+alias gcane="git commit --amend --no-edit"
 
 grb() {
   if [ $# -eq 0 ]
