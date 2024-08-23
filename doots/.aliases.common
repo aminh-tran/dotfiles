@@ -3,6 +3,7 @@ alias graphql="SCHEMA=platform bundle exec rake graphql:schema:dump"
 alias foo="dev style --include-branch-commits & dev tc & dev rbi dsl"
 alias test="dev test --include-branch-commits"
 alias c="bin/rails c"
+alias cl="clear"
 
 # Github commands
 alias gs="git status"
