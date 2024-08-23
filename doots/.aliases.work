@@ -1,0 +1,53 @@
+# Remote general aliases
+alias su="spin up"
+alias shipify="spin up shipify:labels"
+alias ds="dev style --include-branch-commits"
+alias dt="dev test --include-branch-commits"
+
+# Ruby
+alias be="bundle exec"
+
+# Git
+alias ga='git add'
+alias gs='git status -sb'
+alias gaa='git add --all'
+alias gb='git branch'
+alias gc='git commit'
+alias gcm='git commit -m'
+alias gcma='git commit -am'
+alias gcane='git commit --amend --no-edit'
+alias gpsh='git push'
+alias gpll='git pull'
+alias gpf='git push --force-with-lease'
+alias gco='git checkout'
+alias gcom='git checkout main'
+alias gcob='git checkout -b'
+alias grpr='git remote prune origin'
+alias glog='git log --oneline --decorate --color --graph'
+alias glog10='git log --oneline --decorate --color --graph -10'
+alias glog100='git log --oneline --decorate --color --graph -100'
+alias gloga='git log --oneline --decorate --color --graph --all'
+alias gd='git diff'
+alias gsize='git count-objects -vH'
+alias gr='git rebase'
+alias gri='git rebase -i'
+alias grim='git rebase -i main'
+alias grc='git rebase --continue'
+
+# Github CLI
+alias prc='gh pr create -w'
+alias prv='gh pr view -w'
+alias repo='gh repo view -w'
+
+# rails
+alias rc="bin/rails console"
+alias rdbm="bin/rails db:migrate"
+alias rdbrb="bin/rails db:rollback"
+alias rdbr="bin/rails db:reset"
+alias rdbs="bin/rails db:seed"
+alias rr="rails routes --expanded -g"
+alias rt="rails test"
+alias rgm="bin/rails g migration"
+alias rcred="bin/rails credentials:edit"
+alias bi="bundle install"
+alias rgm="bin/rails g migration"
