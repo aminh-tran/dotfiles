@@ -14,6 +14,7 @@ function setupDotfiles() {
   echo "Installing .aliases for $1..."
 
   vimrcFile=".vimrc"
+  commonAliasFile=".aliases.common"
 
   if [[ $1 == 'local' ]]; then
     aliasFile=".aliases.personal"
@@ -23,11 +24,12 @@ function setupDotfiles() {
 
   cp "$DOOT_DIR/$aliasFile" $HOME/".aliases"
   cp "$DOOT_DIR/$vimrcFile" $HOME/".vimrc"
+  cp "$DOOT_DIR/$commonAliasFile" $HOME/".aliases.common"
 
   if [[ -d $DOOT_DIR ]] && [[ ! -L $DOOT_DIR ]]; then
     for doot in $(ls -ap $DOOT_DIR | grep -v /); do
       dootname="$(basename "$doot")"
-      if [[ $dootname =~ '.aliases' ]]; then
+      if [[ $dootname =~ '.aliases' ]] || [[ $dootname == '.aliases.common' ]]; then
         continue
       fi
 
@@ -41,12 +43,27 @@ function setupDotfiles() {
   fi
 }
 
+# Update .zshrc to source .aliases.common
+function updateZshrc() {
+  zshrcFile="$HOME/.zshrc"
+  commonAliasSource="if [ -f ~/.aliases.common ]; then . ~/.aliases.common; fi"
+
+  if ! grep -qF "$commonAliasSource" "$zshrcFile"; then
+    echo "Adding common aliases source to .zshrc..."
+    echo "\n$commonAliasSource" >> "$zshrcFile"
+  else
+    echo "Common aliases source already present in .zshrc."
+  fi
+}
+
 # Personal or Work?
 if [[ $(uname -m) == 'arm64' || -n $SPIN ]]; then
   setupDotfiles 'work'
 else
   setupDotfiles 'local'
 fi
+
+updateZshrc
 
 if [[ ! "$SPIN" ]]; then
   exec zsh

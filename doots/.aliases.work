@@ -2,35 +2,3 @@
 fqdn="$(cat /etc/spin/machine/fqdn)"
 alias oshipify='open "https://shipify.${fqdn}/internal"'
 alias ocore='open "https://app.shopify.${fqdn}/services/internal"'
-
-# Common commands
-alias graphql="SCHEMA=platform bundle exec rake graphql:schema:dump"
-alias foo="dev style --include-branch-commits & dev tc & dev rbi dsl"
-alias test="dev test --include-branch-commits"
-alias c="bin/rails c"
-
-# Github commands
-alias gs="git status"
-alias gb="git branch"
-alias gaa="git add -A"
-alias gcm="git commit -m"
-alias gp="git push"
-alias gpf="git push --force"
-alias gco="git checkout"
-alias gcob="git checkout -b"
-alias gl="git log"
-alias grbc="git rebase --continue"
-
-grb() {
-  if [ $# -eq 0 ]
-  then
-    base="main"
-  else
-    base=$1
-  fi
-  branch=`git branch --show-current`
-  git checkout $base
-  git pull
-  git checkout $branch
-  git rebase $base
-}
