@@ -6,7 +6,7 @@
 if [[ -n $SPIN ]]; then
   DOOT_DIR="$HOME/dotfiles/doots"
 else
-  DOOT_DIR="$HOME/projects/dotfiles/doots"
+  DOOT_DIR="$HOME/dotfiles/doots"
 fi
 
 # Setup Dotfiles
