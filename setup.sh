@@ -57,7 +57,7 @@ function updateZshrc() {
 }
 
 # Personal or Work?
-if [[ $(uname -m) == 'arm64' || -n $SPIN ]]; then
+if [[ -n $SPIN ]]; then
   setupDotfiles 'work'
 else
   setupDotfiles 'local'

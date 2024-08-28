@@ -1,9 +1,1 @@
-spinm() {
-    spin "$@" --cpu 12 --memory 80
-}
-
-spinl() {
-    spin "$@" --cpu 20 --memory 128
-}
-
-alias reload='original_dir=$(pwd) && cd ~/dotfiles && git pull && ./setup.sh && cd $original_dir'
+alias reload="original_dir=$(pwd) && cd ~/dotfiles && git pull && ./setup.sh && cd $original_dir"
