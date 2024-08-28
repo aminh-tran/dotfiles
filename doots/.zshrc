@@ -17,9 +17,5 @@ am_i_spun() {
 
 source $HOME/.aliases
 
-if [ ! -n "$SPIN" ]; then
-	source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
-fi
-
 # Add local or spin stuff to prompt
 # PROMPT+="$(am_i_spun) -> "
