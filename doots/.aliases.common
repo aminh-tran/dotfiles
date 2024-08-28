@@ -1,7 +1,7 @@
 # Common commands
 alias graphql="SCHEMA=platform bundle exec rake graphql:schema:dump"
 alias graphql-break="BREAK_SCHEMA=true SCHEMA=platform bundle exec rake graphql:schema:dump"
-alias foo="dev style --include-branch-commits && dev tc && dev rbi dsl"
+alias foo="dev style --include-branch-commits && dev rbi dsl && dev tc"
 alias test="dev test --include-branch-commits"
 alias all="foo && test"
 alias c="bin/rails c"
