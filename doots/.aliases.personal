@@ -1,0 +1,7 @@
+spinm() {
+    spin "$@" --cpu 12 --memory 80
+}
+
+spinl() {
+    spin "$@" --cpu 20 --memory 128
+}
