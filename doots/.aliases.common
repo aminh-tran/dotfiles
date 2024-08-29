@@ -6,6 +6,7 @@ alias test="dev test --include-branch-commits"
 alias all="foo && test"
 alias c="bin/rails c"
 alias cl="clear"
+aliast bs="bin/rails server"
 
 # Github commands
 alias gs="git status"
