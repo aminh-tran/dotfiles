@@ -7,6 +7,7 @@ alias all="foo && test"
 alias c="bin/rails c"
 alias cl="clear"
 alias bs="bin/rails server"
+alias gpdu="git pull && dev up"
 
 # Github commands
 alias gs="git status"
