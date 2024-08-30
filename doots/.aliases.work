@@ -2,3 +2,4 @@
 fqdn="$(cat /etc/spin/machine/fqdn)"
 alias oshipify='open "https://shipify.${fqdn}/internal"'
 alias ocore='open "https://app.shopify.${fqdn}/services/internal"'
+alias oweb='open "https://admin.web.${fqdn}/store/shop1"'
