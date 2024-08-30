@@ -6,7 +6,7 @@ alias test="dev test --include-branch-commits"
 alias all="foo && test"
 alias c="bin/rails c"
 alias cl="clear"
-aliast bs="bin/rails server"
+alias bs="bin/rails server"
 
 # Github commands
 alias gs="git status"
@@ -21,6 +21,7 @@ alias gcb="git checkout -b"
 alias gl="git log"
 alias grbc="git rebase --continue"
 alias gcane="git commit --amend --no-edit"
+alias gbd="git branch -D"
 
 grb() {
   if [ $# -eq 0 ]
