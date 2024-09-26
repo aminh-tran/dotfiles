@@ -61,6 +61,7 @@ if [[ -n $SPIN ]]; then
   setupDotfiles 'work'
 else
   setupDotfiles 'local'
+  source /opt/homebrew/opt/chruby/share/chruby/auto.sh
 fi
 
 updateZshrc
