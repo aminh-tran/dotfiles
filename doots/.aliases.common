@@ -11,7 +11,7 @@ alias bs="bin/rails server"
 alias gpdu="git pull && dev up"
 
 # Github commands
-# alias gs="git status"
+alias gs="git status"
 alias gb="git branch"
 alias gaa="git add -A"
 alias gcm="git commit -m"
