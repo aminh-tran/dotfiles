@@ -9,6 +9,7 @@ alias c="bin/rails c"
 alias cl="clear"
 alias bs="bin/rails server"
 alias gpdu="git pull && dev up"
+alias gfclean="git branch | grep -v "$(git branch --show-current)" | xargs git branch -D"
 
 # Github commands
 alias gs="git status"
