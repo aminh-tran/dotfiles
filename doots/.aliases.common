@@ -12,6 +12,10 @@ alias gpdu="git pull && dev up"
 alias gfclean="git branch | grep -v "$(git branch --show-current)" | xargs git branch -D"
 alias resetall="dev reset --all"
 alias sql="dev mysql open"
+alias dbt-deploy="shopify_data_platform_dbt deploy staging"
+airflow-deploy() {
+  sdp_airflow deploy dags staging "$@"
+}
 
 # Github commands
 alias gs="git status"
