@@ -19,19 +19,14 @@ airflow-deploy() {
 
 # Github commands
 alias gs="git status"
-alias gb="git branch"
 alias gaa="git add -A"
 alias gcm="git commit -m"
-alias gp="git push"
-alias gpull="git pull"
-alias gpf="git push --force"
 alias gco="git checkout"
 alias gcom="git checkout main"
-alias gcb="gt checkout -b"
-alias gl="gt log"
-alias grbc="git rebase --continue"
 alias gbd="git branch -D"
+alias gl="gt log"
 alias gtm="gt modify"
+alias gtc="gt create"
 
 grb() {
   if [ $# -eq 0 ]
