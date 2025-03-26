@@ -27,11 +27,11 @@ alias gpull="git pull"
 alias gpf="git push --force"
 alias gco="git checkout"
 alias gcom="git checkout main"
-alias gcb="git checkout -b"
-alias gl="git log"
+alias gcb="gt checkout -b"
+alias gl="gt log"
 alias grbc="git rebase --continue"
-alias gcane="git commit --amend --no-edit"
 alias gbd="git branch -D"
+alias gtm="gt modify"
 
 grb() {
   if [ $# -eq 0 ]
