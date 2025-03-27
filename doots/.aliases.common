@@ -25,8 +25,9 @@ alias gco="git checkout"
 alias gcom="git checkout main"
 alias gbd="git branch -D"
 alias gl="gt log"
-alias gtm="gt modify"
-alias gtc="gt create"
+alias gm="gt modify"
+alias gc="gt create"
+alias gsub="gt submit"
 
 grb() {
   if [ $# -eq 0 ]
