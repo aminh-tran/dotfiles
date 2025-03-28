@@ -29,6 +29,11 @@ alias gm="gt modify"
 alias gc="gt create"
 alias gsub="gt submit"
 
+# Update commands
+alias update-graphite="brew update && brew upgrade withgraphite/tap/graphite"
+
+alias update-all="update-graphite"
+
 grb() {
   if [ $# -eq 0 ]
   then
