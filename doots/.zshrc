@@ -23,3 +23,5 @@ source $HOME/.aliases
 
 # Add local or spin stuff to prompt
 # PROMPT+="$(am_i_spun) -> "
+
+eval "$(oh-my-posh init zsh --config ~/my-configs/aliens.omp.json)"
