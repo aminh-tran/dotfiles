@@ -13,6 +13,7 @@ alias gfclean="git branch | grep -v "$(git branch --show-current)" | xargs git b
 alias resetall="dev reset --all"
 alias sql="dev mysql open"
 alias finder="open -R ."
+alias reset="dev reset --all && dev up"
 
 alias dbt-deploy="shopify_data_platform_dbt deploy staging"
 airflow-deploy() {
