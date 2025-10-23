@@ -32,7 +32,7 @@ alias gl="gt log"
 alias gm="gt modify"
 alias gc="gt create"
 alias gsub="gt submit"
-alias gams="gaa && gm && gsub"
+alias gall="gaa && gm && gt sync && gsub"
 
 # Update commands
 alias update-graphite="brew update && brew upgrade withgraphite/tap/graphite"
