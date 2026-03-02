@@ -15,7 +15,7 @@ alias sql="dev mysql open"
 alias finder="open -R ."
 alias reset="dev reset --all && dev up"
 alias ai="devx claude --dangerously-skip-permissions"
-alias ci="devx trigger ci"
+alias ci="devx ci trigger"
 
 alias dbt-deploy="shopify_data_platform_dbt deploy staging"
 airflow-deploy() {
